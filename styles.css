@@ -1,0 +1,161 @@
+html {
+    font-size: 14px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 7.14rem;
+    max-width: 1440px;
+    max-height: 800px;
+    background-color: hsl(30, 38%, 92%);
+}
+
+#card {
+    max-width: 600px;
+    max-height: 450px;
+    display: grid;
+    grid-template-areas: 'left right';
+    grid-template-columns: 1fr 1fr;
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+
+#left {
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right {
+    width: 300px;
+    margin-left: 30px;
+}
+
+
+.product img {
+    width: 300px;
+    height: 450px;
+    border-radius: 10px;
+}
+
+#card .perfume {
+    padding-top: 30px;
+    color: hsl(228, 12%, 48%);
+    font-size: 1rem;
+    font-weight: lighter;
+    letter-spacing: 5px;
+    font-family: 'Montserrat', Helvetica, sans-serif;
+}
+
+#card .name {
+    max-width: 236px;
+    padding-top: 20px;
+    font-family: 'Fraunces', Helvetica, sans-serif;
+    font-size: 2.28rem;
+    font-weight: 700;
+}
+
+#card .info {
+    max-width: 237px;
+    padding-top: 20px;
+    color: hsl(228, 12%, 48%);
+    font-family: 'Montserrat', Helvetica, sans-serif;
+}
+
+
+#card .price {
+    color: hsl(158, 36%, 37%);
+    padding-top: 20px;
+    padding-bottom: 30px;
+    font-family: 'Fraunces', Helvetica, sans-serif;
+    font-size: 2rem;
+}
+
+#card .price span {
+    color: hsl(228, 12%, 48%);
+    font-size: 1rem;
+    padding-left: 20px;
+    text-decoration: line-through;
+}
+
+#card .button {
+    width: 236px;
+    height: 48px;
+    background-color: hsl(158, 36%, 37%);
+    border: 2px solid hsl(158, 36%, 37%);
+    color: #ffffff;
+    font-size: 1rem;
+    border-radius: 5px;
+    font-family: 'Montserrat', Helvetica, sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    transition: hsl(158, 36%, 37%) 0.3s ease;
+}
+
+#card .button:hover {
+    background-color: hsl(158, 36%, 29%); /* Darker color on hover */
+}
+
+@media screen and (min-width: 375px) and (max-width: 480px) {
+
+    body {
+        width: 100%;
+        max-height: 667px;
+    }
+    #card {
+        width: 343px;
+        max-height: 667px;
+        grid-template-areas: 'left' 'right';
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .right {
+        width: 100%;
+        margin: 0;
+        margin-left: 30px;
+    }
+
+    .product img {
+        width: 100%;
+        height: 250px;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0;
+    }
+
+    #card .perfume {
+        padding-top: 10px
+    }
+
+    #card .name {
+        width: 100%;
+        max-width: 295px;
+    }
+
+    #card .info {
+        width: 100%;
+        max-width: 295px;
+    }
+
+    #card .price {
+        width: 100%;
+        max-width: 195px;
+    }
+
+    #card .button {
+        width: 100%;
+        max-width: 295px;
+        margin-bottom: 15px;
+    }
+}
